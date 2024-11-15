@@ -64,6 +64,7 @@ Follow these steps to connect to your Linux VM's graphical interface using the R
   ```
   
   4. Verify or Create the .xsession File in Your User Directory
+     
  ```bash
  echo "startxfce4" > ~/.xsession
  ```
@@ -71,11 +72,15 @@ Follow these steps to connect to your Linux VM's graphical interface using the R
  ```bash
  chmod +x ~/.xsession
  ```
+
  5. Restart the VM and Reconnect
+    
  ```bash
  sudo reboot
  ```
+
  6. If the Problem Persists , Ensure that Xfce is properly installed:
+    
  ```bash
  sudo apt install --reinstall xfce4
  ```
