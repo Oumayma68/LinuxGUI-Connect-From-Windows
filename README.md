@@ -58,38 +58,23 @@ Follow these steps to connect to your Linux VM's graphical interface using the R
   2. Modify the content of the file to match this content : [Check out the `startwm.sh` file](https://github.com/Oumayma68/LinuxGUI-Connect-From-Windows/blob/main/startwm.sh)
 
 
-  3. Restart the xrdp Service
+3. Restart the xrdp Service
   ```bash
   sudo systemctl restart xrdp
   ```
   
-  4. Verify or Create the .xsession File in Your User Directory and Make sure the file has the correct execution 
+4. Verify or Create the .xsession File in Your User Directory and Make sure the file has the correct execution 
    permissions   
  ```bash
  echo "startxfce4" > ~/.xsession
  chmod +x ~/.xsession
  ```
-
-
-  5. Verify or Create the .xsession File in Your User Directory and Make sure the file has the correct execution 
-   permissions   
- ```bash
- echo "startxfce4" > ~/.xsession
- chmod +x ~/.xsession
- ```
-
-  6. Verify or Create the .xsession File in Your User Directory and Make sure the file has the correct execution 
-   permissions   
- ```bash
- echo "startxfce4" > ~/.xsession
- chmod +x ~/.xsession
- ```
- 5. Restart the VM and Reconnect
+5. Restart the VM and Reconnect
  ```bash
  sudo reboot
  ```
 
- 6. If the Problem Persists , Ensure that Xfce is properly installed
+6. If the Problem Persists , Ensure that Xfce is properly installed
     
  ```bash
  sudo apt install --reinstall xfce4
