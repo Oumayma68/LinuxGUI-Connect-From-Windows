@@ -51,11 +51,11 @@ Follow these steps to connect to your Linux VM's graphical interface using the R
 * If the connection is successful, the graphical interface of your Linux VM will appear in a new window on your Windows PC.
 * If you encounter issues like the RDP window disappearing after entering the password, or a black screen after connecting, these are often caused by misconfigurations between xrdp and the desktop environment on your Linux VM.
  Follow the steps below to resolve these problems:
-  1. Check and Update the xrdp Startup File , Open `startwm.sh` :
+1. Check and Update the xrdp Startup File , Open `startwm.sh` :
    ```bash
    sudo nano /etc/xrdp/startwm.sh
    ```
-  2. Modify the content of the file to match this content : [Check out the `startwm.sh` file](https://github.com/Oumayma68/LinuxGUI-Connect-From-Windows/blob/main/startwm.sh)
+2. Modify the content of the file to match this content : [Check out the `startwm.sh` file](https://github.com/Oumayma68/LinuxGUI-Connect-From-Windows/blob/main/startwm.sh)
 
 
 3. Restart the xrdp Service
