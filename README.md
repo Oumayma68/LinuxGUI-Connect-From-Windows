@@ -63,24 +63,15 @@ Follow these steps to connect to your Linux VM's graphical interface using the R
   sudo systemctl restart xrdp
   ```
   
-  4. Verify or Create the .xsession File in Your User Directory
- 
-     
+  4. Verify or Create the .xsession File in Your User Directory and Make sure the file has the correct execution permissions   
  ```bash
  echo "startxfce4" > ~/.xsession
- ```
- Make sure the file has the correct execution permissions:
- ```bash
  chmod +x ~/.xsession
  ```
-
  5. Restart the VM and Reconnect
-
-    
  ```bash
  sudo reboot
  ```
-
  6. If the Problem Persists , Ensure that Xfce is properly installed
     
  ```bash
