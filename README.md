@@ -51,38 +51,31 @@ Follow these steps to connect to your Linux VM's graphical interface using the R
 * If the connection is successful, the graphical interface of your Linux VM will appear in a new window on your Windows PC.
 * If you encounter issues like the RDP window disappearing after entering the password, or a black screen after connecting, these are often caused by misconfigurations between xrdp and the desktop environment on your Linux VM.
  Follow the steps below to resolve these problems:
+  1. Check and Update the xrdp Startup File , Open `startwm.sh` :
+   ```bash
+   sudo nano /etc/xrdp/startwm.sh
+   ```
+  2. Modify the content of the file to match this content : [Check out the `startwm.sh` file](https://github.com/Oumayma68/LinuxGUI-Connect-From-Windows/blob/main/startwm.sh)
 
-      ## Check and Update the xrdp Startup File
-  
-      1. Open the `startwm.sh` file for editing:
-      ```bash
-       sudo nano /etc/xrdp/startwm.sh
-      ```
-      2. Modify the content of the file to match this content : [Check out the `startwm.sh` file](https://github.com/Oumayma68/LinuxGUI-Connect-From-Windows/blob/main/startwm.sh)
-
-      3.Restart the xrdp Service
-      ```bash
-      sudo systemctl restart xrdp
-      ```
-     4. Verify or Create the .xsession File in Your User Directory
-      Create or modify the .xsession file:
-      ```bash
-      echo "startxfce4" > ~/.xsession
-      ```
-      Make sure the file has the correct execution permissions:
-      ```bash
-      chmod +x ~/.xsession
-      ```
-     5.Restart the VM and Reconnect
-     After making the changes, restart the VM to ensure everything is applied:
-     ```bash
-    sudo reboot
-    ```
-     6.If the Problem Persists
-    Ensure that Xfce is properly installed:
-    ```bash
-    sudo apt install --reinstall xfce4
-    ```
-
- You can now use your Linux environment remotely with full GUI access!
+  3.Restart the xrdp Service
+  ```bash
+  sudo systemctl restart xrdp
+  ```
+  4. Verify or Create the .xsession File in Your User Directory
+ ```bash
+ echo "startxfce4" > ~/.xsession
+ ```
+ Make sure the file has the correct execution permissions:
+ ```bash
+ chmod +x ~/.xsession
+ ```
+ 5.Restart the VM and Reconnect
+ ```bash
+ sudo reboot
+ ```
+ 6.If the Problem Persists , Ensure that Xfce is properly installed:
+ ```bash
+ sudo apt install --reinstall xfce4
+ ```
+You can now use your Linux environment remotely with full GUI access!
 
