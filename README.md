@@ -70,6 +70,20 @@ Follow these steps to connect to your Linux VM's graphical interface using the R
  chmod +x ~/.xsession
  ```
 
+
+  5. Verify or Create the .xsession File in Your User Directory and Make sure the file has the correct execution 
+   permissions   
+ ```bash
+ echo "startxfce4" > ~/.xsession
+ chmod +x ~/.xsession
+ ```
+
+  6. Verify or Create the .xsession File in Your User Directory and Make sure the file has the correct execution 
+   permissions   
+ ```bash
+ echo "startxfce4" > ~/.xsession
+ chmod +x ~/.xsession
+ ```
  5. Restart the VM and Reconnect
  ```bash
  sudo reboot
